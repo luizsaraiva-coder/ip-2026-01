@@ -1,3 +1,4 @@
+// Composição Inteira (+)  - Att3
 // Escreva um algoritmo em Linguagem C que leia três números inteiros separados (n1, n2, n3) e calcule
 // o número inteiro correspondente à concatenação dos três números lidos, de modo que n1 seja a centena, n2
 // a dezena e n3 a unidade. O programa deve apresentar o número calculado e também o seu quadrado. Caso

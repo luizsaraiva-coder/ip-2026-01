@@ -1,3 +1,4 @@
+// Conversão de temperatura - Att6
 // Escreva um programa que imprima uma tabela de conversão de graus Fahrenheit para graus Celsius.
 // Dado um valor de temperatura F medida na escala Fahrenheit, seu valor equivalente C na escala Celsius é
 // dado pela seguinte equação: C = (5(F-32)) / 9

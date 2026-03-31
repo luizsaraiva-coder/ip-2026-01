@@ -1,3 +1,4 @@
+// Arrecadação de Jogos - Att2
 // Escrever um algoritmo que lê o público total de futebol, as percentagens de pessoas nas seguintes
 // categorias: popular, geral, arquibancada e cadeiras e forneça a renda total do jogo. Sabe-se que o valor
 // dos ingressos por categoria são dados pela tabela abaixo:

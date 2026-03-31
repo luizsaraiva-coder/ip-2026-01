@@ -15,6 +15,25 @@
 
 package main
 
+import (
+	"fmt"
+	"math"
+)
+
 func main() {
+
+	const pi float64 = 3.14159
+	var aT, aC, aL, C, r, A float64
+
+	fmt.Scan(&r, &A)
+	fmt.Print("Informe o valores do raio e altura da lata: ")
+
+	aC = pi * math.Pow(raio, 2)
+	aL = 2 * pi * raio * altura
+	aT = (2 * areaCirculo) + areaLateral
+
+	C = aT * 100
+
+	fmt.Printf("O VALOR DO CUSTO E = %.2f\n", custo)
 
 }
