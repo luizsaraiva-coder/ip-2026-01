@@ -17,6 +17,17 @@
 
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	var vInicial, r, qtdElementos, S, vSequencia int
+
+	fmt.Print("Informe os 3 valores em sequencia: Valor inicial, razao e quantidade de elementos: \n")
+	fmt.Scan(&vInicial, &r, &qtdElementos)
+
+	for i := 0; i < qtdElementos; i++ {
+		vSequencia = vInicial + (r * i)
+		S += vSequencia
+	}
+	fmt.Print(S, "\n")
 }
