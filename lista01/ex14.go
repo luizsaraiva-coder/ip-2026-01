@@ -1,3 +1,4 @@
+// Volume da Pirâmide de Base Hexagonal - Att14
 // O volume (V ) de uma pirâmide cuja base é um hexágono regular é computado pela
 // Equação 1: v = (1/3) · Ab · h,
 // onde h é a altura da pirâmide e Ab é a área do hexágono que forma a base da pirâmide. A área do hexágono
@@ -14,6 +15,20 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+	"math"
+)
 
+func main() {
+	var h, a float64
+	var Ab, V float64
+
+	fmt.Print("Informe a altura e depois o comprimento de uma aresta do hexágono: ")
+	fmt.Scan(&h, &a)
+
+	Ab = (3 * a * a * math.Sqrt(3)) / 2
+	V = (Ab * h) / 3
+
+	fmt.Printf("O VOLUME DA PIRÂMIDE E = %.2f METROS CUBICOS\n", V)
 }

@@ -1,3 +1,4 @@
+// Série de pares - Att17
 // Escreva um programa para ler uma linha com dois números inteiros x e y. O programa deve verificar se
 // x é um número par. Se for, o programa deve imprimir uma sequência de y números pares, iniciando com x.
 // Se x não for par, o programa deve imprimir uma linha com a mensagem: O PRIMEIRO NUMERO NAO E
@@ -14,6 +15,20 @@
 
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	var n1, n2, sequencia int
+
+	fmt.Print("Informe um número A e depois B: \n")
+	fmt.Scan(&n1, &n2)
+
+	if n1%2 == 0 {
+		for i := 0; i < n2; i++ {
+			sequencia = n1
+
+			fmt.Print(sequencia, " ")
+			n1 += 2
+		}
+	}
 }

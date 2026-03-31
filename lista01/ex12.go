@@ -1,3 +1,4 @@
+// Locadora de charretes - Att12
 // Uma locadora de charretes cobra R$ 10,00 de taxa para cada 3 horas de uso de uma charrete e R$5,00
 // para cada 1 hora abaixo dessas 3 horas. Fazer um programa que leia a quantidade de horas que a charrete
 // foi usada e que calcule e escreva quanto o cliente tem de pagar.
@@ -11,6 +12,21 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+)
 
+func main() {
+	var horas int
+	var valor float64
+
+	fmt.Print("Informe a quantidade de horas: ")
+	fmt.Scan(&horas)
+
+	blocos := horas / 3
+	resto := horas % 3
+
+	valor = float64(blocos*10 + resto*5)
+
+	fmt.Printf("O VALOR A PAGAR E = %.2f\n", valor)
 }

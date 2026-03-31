@@ -1,3 +1,4 @@
+// Quadrado de pares - Att15
 // Escreva um programa para ler um valor inteiro N e que gere o quadrado de cada um dos valores pares,
 // de 1 até N, inclusive N, se for o caso.
 // Entrada
@@ -9,6 +10,18 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+)
 
+func main() {
+	var N int
+
+	fmt.Print("Informe um número: ")
+	fmt.Scan(&N)
+
+	for i := 2; i <= N; i += 2 {
+		quadrado := i * i
+		fmt.Printf("%d^2 = %d\n", i, quadrado)
+	}
 }

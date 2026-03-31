@@ -1,3 +1,4 @@
+// Reajuste salarial - Att16
 // Fazer um algoritmo que calcule e imprima o salário reajustado de um funcionário de acordo com as
 // seguintes regras:
 // • Salário de até R$ 300,00, reajuste de 50%;
@@ -11,6 +12,21 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+)
 
+func main() {
+	var salario, novoSalario float64
+
+	fmt.Print("Informe o salário do funcionário: ")
+	fmt.Scan(&salario)
+
+	if salario <= 300 {
+		novoSalario = salario * 1.5
+	} else {
+		novoSalario = salario * 1.3
+	}
+
+	fmt.Printf("SALARIO COM REAJUSTE = %.2f\n", novoSalario)
 }

@@ -1,3 +1,4 @@
+// Conversão de Nota em Conceito - Att13
 // Em um curso de mestrado as avaliações dos alunos no histórico escolar aparecem em forma de conceito.
 // O regulamento do mestrado indica que um professor pode avaliar seus alunos com notas convencionais de
 // zero a dez, mas precisa repassar à secretaria do curso a avaliação em termos de conceito. Nesse caso, a
@@ -18,6 +19,26 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+)
 
+func main() {
+	var nota float64
+	var conceito string
+
+	fmt.Print("Informe a nota do aluno: ")
+	fmt.Scan(&nota)
+
+	if nota >= 9.0 && nota <= 10.0 {
+		conceito = "A"
+	} else if nota >= 7.5 && nota < 9.0 {
+		conceito = "B"
+	} else if nota >= 6.0 && nota < 7.5 {
+		conceito = "C"
+	} else if nota >= 0 && nota < 6.0 {
+		conceito = "D"
+	}
+
+	fmt.Printf("NOTA = %.1f CONCEITO = %s\n", nota, conceito)
 }
