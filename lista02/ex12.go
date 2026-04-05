@@ -8,3 +8,30 @@
 // Acima de 55 anos                          Idoso
 
 package main
+
+import f "fmt"
+
+func main() {
+
+	var idade int
+
+	f.Println("Digite a idade: ")
+	f.Scan(&idade)
+
+	if idade >= 0 && idade <= 2 {
+		f.Print("Recém-nascido")
+
+	} else if idade >= 3 && idade <= 11 {
+		f.Print("Criança")
+
+	} else if idade >= 12 && idade <= 19 {
+		f.Print("Adolescente")
+
+	} else if idade >= 20 && idade <= 55 {
+		f.Print("Adulto")
+
+	} else {
+		f.Print("Idoso")
+	}
+
+}
