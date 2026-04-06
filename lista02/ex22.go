@@ -11,3 +11,35 @@
 // • Salário líquido = salário bruto – deduções.
 
 package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var matricula int
+	var qtdHorasExtras, salarioExtra, salarioBruto, salarioLiqui float64
+
+	const (
+		salarioMinimo, valorHoraExtra = 788.00, 10.0
+	)
+
+	fmt.Println("Informe a matrícula do funcionário:")
+	fmt.Scan(&matricula)
+	fmt.Println("Informe a quantidade de horas extras trabalhadas:")
+	fmt.Scan(&qtdHorasExtras)
+
+	salarioExtra = valorHoraExtra * qtdHorasExtras
+	salarioBruto = 3*salarioMinimo + salarioExtra
+
+	salarioLiqui = salarioBruto
+
+	if salarioBruto < 2000 {
+		salarioLiqui *= 0.88
+	} else {
+		salarioLiqui *= 0.80
+	}
+
+	fmt.Printf("Funcionário %d\nSalário Bruto: R$%.2f\nSalário liquído: R$%.2f\n", matricula, salarioBruto, salarioLiqui)
+
+}

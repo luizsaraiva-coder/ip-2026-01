@@ -7,3 +7,43 @@
 // lançamento). Calcular e imprimir o preço final que será pago pela locação do DVD.
 
 package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	categoriaDvd := ""
+	diaSemana := 0
+	precoB, precoF := 0.0, 0.0
+
+	fmt.Println("--- Sistema de Locadora ---")
+	fmt.Print("Preço normal do DVD (R$): ")
+	fmt.Scan(&precoB)
+	fmt.Print("Categoria (C - Comum / L - Lançamento): ")
+	fmt.Scan(&categoriaDvd)
+	fmt.Print("Dia da semana (1-Dom, 2-Seg, 3-Ter, 4-Qua, 5-Qui, 6-Sex, 7-Sab): ")
+	fmt.Scan(&diaSemana)
+
+	categoriaDvd = strings.ToUpper(categoriaDvd)
+
+	precoF = precoB
+
+	if categoriaDvd == "L" {
+		precoF *= 1.15
+	} else if categoriaDvd != "L" {
+		fmt.Println("Categoria inválida! Considerando como Comum.")
+	}
+
+	switch diaSemana {
+	case 4, 6, 7, 1:
+		precoF *= 0.60
+	case 2, 3, 5:
+	default:
+		fmt.Println("Dia da semana inválido!")
+		return
+	}
+	fmt.Printf("Valor total a ser pago é %.2f\n", precoF)
+
+}
