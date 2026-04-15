@@ -1,0 +1,1 @@
+// Calcule a soma de todos os valores de um array de reais

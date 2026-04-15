@@ -1,0 +1,1 @@
+// Dados dois números inteiros x e n, calcula o valor de x elevado a n
