@@ -6,3 +6,7 @@
 // raiz quadrada. Não é permitido usar o comando sqrt
 // em sua solução.
 
+package main 
+
+import f "fmt" 
+
