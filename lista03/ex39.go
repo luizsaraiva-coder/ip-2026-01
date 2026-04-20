@@ -15,7 +15,7 @@ func main() {
 	var maiorPeso, menorPeso int
 	var numMaior, numMenor int
 
-	for i := 1; i <= 90; i++ {
+	for i := 1; i <= 30; i++ {
 
 		fmt.Printf("Boi %d - Número: ", i)
 		fmt.Scan(&numero)
